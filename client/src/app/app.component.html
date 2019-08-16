@@ -1,0 +1,17 @@
+<table border=1>
+  <tr>
+    <th>Complete?</th>
+    <th>Task</th>
+  </tr>
+  <tr *ngFor="let task of tasks">
+    <td>{{ task.isComplete }}</td>
+    <td>{{ task.task }}</td>
+  </tr>
+</table>
+
+<hr>
+
+<form (submit)="addTask()">
+  <input type="text" name="newTask.task" [(ngModel)]="newTask.task" />
+  <input type="submit" />
+</form>
